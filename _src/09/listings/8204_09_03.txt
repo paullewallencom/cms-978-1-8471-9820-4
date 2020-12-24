@@ -1,0 +1,25 @@
+<div class="products-detail">
+<img align="left" src="{$entry->file_location}/{$entry->fields.image->value}" alt="{$entry->product_name}"/>
+
+<h1>{$entry->product_name}</h1>
+<h2>{$currency_symbol}{$entry->price}</h2>
+
+<div>{$entry->details}</div>
+
+{* print out attributes *}
+{if isset($entry->attributes)}
+  {foreach from=$entry->attributes key='name' item='attribset'}
+     <p><strong>{$name}:</strong> 
+       {foreach from=$attribset key='label' item='adjustment'}
+         {$label} ({$currency_symbol}{$adjustment}), 
+       {/foreach}
+     </p>
+  {/foreach}
+{/if}
+
+{* include the cart *}
+{if isset($cart_module_tag)}
+{eval var=$cart_module_tag}
+{/if}
+
+</div>

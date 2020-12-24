@@ -1,0 +1,22 @@
+{if isset($message)}
+  <p class="info">{$message}</p>
+{else}
+{if isset($error)}
+  <p class="error">{$error}</p>
+{/if}
+{$formstart}
+<input type="hidden" name="{$actionid}title" value="Re: {$onecomment.title}"/></p>
+
+<p><label>{$mod->Lang('prompt_your_name')}:</label>
+<input type="text" name="{$actionid}author_name" value="{$onecomment.author_name}"/></p>
+
+<p><label>{$mod->Lang('prompt_your_email')}:</label>
+<input type="text" name="{$actionid}author_email" value="{$onecomment.author_email}"/></p>
+
+<p><label>Question:</label>
+<textarea name="{$actionid}comment" cols="40" rows="5">{$comment}</textarea></p>
+
+<p><input type="submit" name="{$actionid}submit" value="{$mod->Lang('submit')}"/></p>
+
+{$formend}
+{/if}

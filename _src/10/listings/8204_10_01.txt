@@ -1,0 +1,7 @@
+global $gCms;
+$cmsmailer = $gCms->modules['CMSMailer']['object'];
+$cmsmailer->AddAddress($cmsmailer->GetFrom(),$cmsmailer->GetFromName());
+$cmsmailer->SetSubject('Admin buzzer');
+$cmsmailer->SetBody('The page <i>' .$params['content']->mName.'</i> has been changed.');
+$cmsmailer->IsHTML(true);
+$cmsmailer->Send();

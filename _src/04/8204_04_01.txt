@@ -1,0 +1,24 @@
+#top-navi ul {
+      height: 22px;
+      padding: 0px;
+      margin: 10px 0;
+      border-top: 1px solid #e5e4e2;
+      border-bottom: 1px solid #e5e4e2;
+}
+
+#top-navi li {
+       list-style: none;
+       float:left;
+}
+
+#top-navi li a {
+       color: #a2a2a2;
+       text-decoration: none;
+       display: block;
+       padding: 5px 15px;
+}
+
+#top-navi li a:hover {
+       color: #ffffff;
+       background: #3d648a;
+}

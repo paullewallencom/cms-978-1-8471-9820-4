@@ -1,0 +1,9 @@
+{if $itemcount > 0}
+<ul>
+{foreach from=$itemlist item="item"}
+	<li style="list-style-type:none; float:left; margin: 20px;"><a href="{$item->detailurl}"><img src="uploads/{$item->image->thumbnail}" alt="{$item->name}" /></a>
+<br />
+{$item->detaillink}<br/>{$item->price} USD</li>
+{/foreach}
+</ul>
+{/if}

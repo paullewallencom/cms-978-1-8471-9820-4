@@ -1,0 +1,14 @@
+{Products action="categorylist"}
+
+<ul class="products-summary">
+{foreach from=$items item=entry}
+<li>
+<a href="{$entry->detail_url}">
+<img src="{$entry->file_location}/{$entry->fields.image->thumbnail}" alt="{$entry->product_name}"/></a>
+<br/>
+<a href="{$entry->detail_url}">{$entry->product_name}</a>
+<br/>
+{$currency_symbol}{$entry->price}
+</li>
+{/foreach}
+</ul>

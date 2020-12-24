@@ -1,0 +1,5 @@
+global $gCms;
+$db = $gCms->db;						
+$query = "select first_name, last_name from ". $gCms->config['db_prefix'] . "users where user_id =?";
+$row = $db->GetRow($query, array($params['user']));
+echo $row['first_name'].' '.$row['last_name'];

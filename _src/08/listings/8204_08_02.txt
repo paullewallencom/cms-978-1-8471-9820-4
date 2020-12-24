@@ -1,0 +1,24 @@
+{if isset($message)}
+  <p class="success">{$message}</p>
+{else}
+{if isset($error)}
+  <p class="error">{$error}</p>
+{/if}
+{$formstart}
+
+<p><label>Title:</label>
+<input type="text" name="{$actionid}title" value="{$title}"/></p>
+
+<p><label>Your name:</label>
+<input type="text" name="{$actionid}author_name" value="{$author_name}"/></p>
+
+<p><label>Your e-mail:</label>
+<input type="text" name="{$actionid}author_email" value="{$author_email}"/></p>
+
+<p><label>Question:</label>
+<textarea name="{$actionid}comment" cols="40" rows="5">{$comment}</textarea></p>
+
+<p><input type="submit" name="{$actionid}submit" value="Send"/></p>
+
+{$formend}
+{/if}

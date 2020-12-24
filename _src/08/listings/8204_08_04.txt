@@ -1,0 +1,19 @@
+<h3>Ticket No. {$onecomment.id}: {$onecomment.title}</h3>
+<p>{$onecomment.created|date_format:"%a %d %b %H:%M"} | <a href="mailto:{$onecomment.author_email}">{$onecomment.author_name}</a></p>
+
+    <div class="feedback_item_data">
+      {$onecomment.data}
+    </div>
+
+{if isset($onecomment.fields)}    
+      {foreach from=$onecomment.fields key='name' item='field'}
+      {assign var=$name value=$field.value} 
+      {/foreach}
+{if !empty($Answer)}
+<p><strong>Staff Anwer</strong><br/>
+<small>{$onecomment.modified|date_format:"%a %d %b %H:%M"} | {$Staff}</small></p>
+<div>
+{$Answer}
+</div>
+{/if}
+{/if}

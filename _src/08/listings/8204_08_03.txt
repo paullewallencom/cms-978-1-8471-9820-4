@@ -1,0 +1,9 @@
+{if isset($comments)}
+{foreach from=$comments item='one'}
+   <p><strong>Ticket No {$one.id}: <a href="{$one.detail_url}" title="{$one.title}">{$one.title}</a></strong><br/>
+   <small>{$one.created|date_format:"%a %d %b %H:%M"} | <a href="mailto{$one.author_email}">{$one.author_name}</a></small></p>
+    <div class="feedback_item_data">
+      {$one.data}
+    </div>
+{/foreach}
+{/if}

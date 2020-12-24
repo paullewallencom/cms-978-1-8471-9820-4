@@ -1,0 +1,18 @@
+{if isset($child_nodes) && count($child_nodes)}
+  {foreach from=$child_nodes item='node'}      
+     <h3>
+       {if isset($node.downurl)}
+         <a href="{$node.downurl}" title="{$node.name}">{$node.name}</a>
+       {else}
+         {$node.name}
+       {/if}
+     </h3>
+     {if !empty($node.description)}
+      <div>{$node.description}</div>
+     {/if}
+  {/foreach}
+{/if}
+
+<!-- This tag will be automatically added to the page content.
+     It uses the default summary template for products. --> 
+{Products hierarchyid=$hierarchy_item.id}

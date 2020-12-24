@@ -1,0 +1,17 @@
+<div id="gallery" class="ad-gallery">
+	<div class="ad-image-wrapper">
+	</div>
+	<div class="ad-controls">
+	</div>
+	<div class="ad-nav">
+		<div class="ad-thumbs">
+			<ul class="ad-thumb-list">
+				 {foreach from=$images item=image} {if !$image->isdir}
+				<li><a href="{$image->file}">
+              <img src="{$image->thumb}" title="{$image->title}" longdesc="{$image->comment}" class="image0">
+               </a></li>
+				{/if} {/foreach}
+			</ul>
+		</div>
+	</div>
+</div>

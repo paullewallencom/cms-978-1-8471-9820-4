@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Company</title>
+<link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+<meta name=”description” content=”” />
+</head>
+<body>
+<div id="container">
+<div id="header">
+     businessWorld
+</div>
+<div id="top-navi">
+    <ul class="clearfix">
+        <li><a href="#"> Our Company </a></li>
+        <li><a href="#"> Products </a></li>
+        <li><a href="#"> Client Center </a></li>
+        <li><a href="#"> Contact Us </a></li>
+        <li><a href="#"> Sitemap </a></li>
+    </ul>
+</div>
+<div id="content">
+    <h1>Our Company</h1>
+    <p>
+        Lorem ipsum quo ea eruditi epicuri dolores, mea no delicata reprehendunt. Mea possit aperiri iracundia in, ad veri ocurreret scribentur his, justo qualisque adipiscing pro an. Has congue dissentiunt an, ea summo simul repudiandae sit. Omnium aliquam disputationi est no, etiam deleniti eos in, te pro reque torquatos. Adhuc cetero alienum te mei, nec id solum partem populo.
+    </p>
+    <p>
+        Sit putent fabulas complectitur ne, pro te velit viris ocurreret. Eam dico habeo aeterno ei, ut deserunt eloquentiam pri. Vim ad alii populo expetendis, et pro dolorum scaevola partiendo. Mea te timeam delicata deterruisset, ius no molestie lobortis definiebas, etiam inciderint eos ea. Ea sit fugit audiam, nec clita alterum intellegebat cu, nonummy fuisset id mel. Eam ut amet sensibus consequat, erant legimus vim id.
+    </p>
+</div>
+<div id="sidebar">
+    <ul class="clearfix">
+        <li><a href="#"> Announcements </a></li>
+        <li><a href="#"> History </a></li>
+        <li><a href="#"> Team </a></li>
+        <li><a href="#"> Photo gallery </a></li>
+    </ul>
+</div>
+<div id="footer">
+        2009 businessWorld
+</div>
+</div>
+</body>
+</html>

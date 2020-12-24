@@ -1,0 +1,23 @@
+{if isset($comments)}
+{foreach from=$comments item='one'}
+<p><strong>{$one.title}</strong><br/>
+<small>{$one.created|date_format:"%a %d %b %H:%M"} | <a href="mailto:{$one.author_email}">{$one.author_name}</a></small></p>
+
+    <div class="feedback_item_data">
+      {$one.data}
+    </div>
+
+{if isset($one.fields)}    
+      {foreach from=$one.fields key='name' item='field'}
+      {assign var=$name value=$field.value} 
+      {/foreach}
+{if !empty($Answer)}
+<p><strong>Staff Anwer</strong><br/>
+<small>{$one.modified|date_format:"%a %d %b %H:%M"} | {$Staff}</small></p>
+<div>
+{$Answer}
+</div>
+{/if}
+{/if}
+{/foreach}
+{/if}
